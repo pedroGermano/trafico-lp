@@ -1,8 +1,13 @@
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { fadeInUp, fadeInDown, staggerTextContainer } from "../variants";
+import Image from 'next/image';
+
+// import motion
+import { motion } from 'framer-motion';
+
+// import variants
+import { fadeInUp, fadeInDown, staggerTextContainer } from '../variants';
 
 const About = ({ aboutData }) => {
+  // destructure about data
   const { title, subtitle, text, boyImg } = aboutData;
   return (
     <section className='mb-[60px] lg:mb-[160px]'>
@@ -27,7 +32,7 @@ const About = ({ aboutData }) => {
           </motion.div>
           {/* image */}
           <motion.div variants={fadeInUp} className='flex-1'>
-            <Image src={boyImg} width={575} height={480} alt="boy image" />
+            <Image src={boyImg} width={575} height={480} alt="boy"/>
           </motion.div>
         </motion.div>
       </div>
